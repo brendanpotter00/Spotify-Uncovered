@@ -1,13 +1,21 @@
 import "./App.css";
+import Login from "./Login";
+import Dashboard from "./Dashboard";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const code = new URLSearchParams(window.location.search).get("code");
 
 function App() {
-  return (
+  return code ? (
     <div className="App">
-      <header className="App-header">
-        <p>
-          <code>spotify uncovered</code>
-        </p>
-      </header>
+      <Dashboard code={code} />
+    </div>
+  ) : (
+    <div className="App">
+      <p>
+        <code>spotify uncovered</code>
+      </p>
+      <Login />
     </div>
   );
 }
