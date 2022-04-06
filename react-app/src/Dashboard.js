@@ -8,7 +8,7 @@ function Dashboard({ code }) {
       <p>
         <code>spotify uncovered</code>
       </p>
-      code from urls has been gotten {code}
+      User has been logged in
     </div>
   );
 }
